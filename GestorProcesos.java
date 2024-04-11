@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class GestorProcesos {
-    private ColaPrioridad colaPrioridad;
+    private final ColaPrioridad colaPrioridad;
 
     public GestorProcesos() {
         colaPrioridad = new ColaPrioridad();
@@ -28,7 +28,7 @@ public class GestorProcesos {
     public void procesarProcesos() {
         while (colaPrioridad.hayProcesos()) {
             Proceso proceso = colaPrioridad.obtenerProcesoSiguiente();
-            System.out.println("Proceso: " + proceso);
+            System.out.println("GestorProcesos.Proceso: " + proceso);
         }
     }
 
@@ -37,4 +37,5 @@ public class GestorProcesos {
         gestor.cargarProcesosManualmente();
         gestor.procesarProcesos();
     }
+
 }

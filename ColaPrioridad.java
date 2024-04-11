@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ColaPrioridad {
-    private List<Proceso> heap;
+    List<Proceso> heap;
 
     public ColaPrioridad() {
         heap = new ArrayList<>();
@@ -28,9 +28,9 @@ public class ColaPrioridad {
         if (heap.isEmpty()) {
             return null;
         }
-        Proceso proceso = heap.get(0);
-        heap.set(0, heap.get(heap.size() - 1));
-        heap.remove(heap.size() - 1);
+        Proceso proceso = heap.getFirst();
+        heap.set(0, heap.getLast());
+        heap.removeLast();
         int indiceActual = 0;
         while (true) {
             int hijoIzquierdo = 2 * indiceActual + 1;

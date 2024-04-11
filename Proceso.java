@@ -1,7 +1,7 @@
 public class Proceso implements Comparable<Proceso> {
-    private String nombreProceso;
-    private String nombreUsuario;
-    private int valorNice;
+    String nombreProceso;
+    private final String nombreUsuario;
+    private final int valorNice;
 
     public Proceso(String nombreProceso, String nombreUsuario, int valorNice) {
         this.nombreProceso = nombreProceso;
